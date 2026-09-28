@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ScrollKey</string>
+    <string name="accessibility_service_description">ScrollKey enables physical hardware volume buttons, wired headsets, and Bluetooth earbuds to scroll selected applications smoothly.</string>
+</resources>
