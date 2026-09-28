@@ -11,11 +11,11 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-      - name: Find and Build
+      - name: Build with Built-in Tools
         run: |
-          cd $(dirname $(find . -name gradlew | head -n 1))
-          chmod +x ./gradlew
-          ./gradlew assembleDebug
+          PROJECT_DIR=$(dirname $(find . -name "build.gradle*" -o -name "settings.gradle*" | head -n 1))
+          cd "$PROJECT_DIR"
+          gradle assembleDebug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
